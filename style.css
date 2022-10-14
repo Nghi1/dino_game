@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body{
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    flex-direction: column;
+}
+p{
+    text-align: center;
+}
+.game{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.begin{
+    width: 50px !important;
+    position: relative;
+    left: -270px;
+    border: none;
+    top: 0px;
+}
+#dino{
+    position: relative;
+    background-image: url("./images/trex.png");
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    top: 250px;
+}
+.jump{
+    animation: jump 1s;
+}
+@keyframes jump {
+    0%{
+        top: 250px
+    }
+    25%{
+        top: 230px
+    }
+    50%{
+        top: 190px
+    }
+    75%{
+        top: 230px
+    }
+    100%{
+        top: 250px
+    }
+}
+#cactus{
+    position: relative;
+    width: 20px;
+    height: 40px;
+    background-image: url("./images/cactus.png");
+    left: 560px;
+    top: 210px;
+    background-size: 20px 40px;
+}
+.run{
+    animation: run 2s infinite linear;
+}
+@keyframes run {
+    0%{
+        left: 560px
+    }
+    100%{
+        left: -30px
+    }
+}
+#over{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+.block{
+    display: block !important;
+}
+#over::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    content: '';
+    width: 50px;
+    height: 50px;
+    background-image: url("./images/reset.png");
+    background-size: 50px 50px;
+    cursor: pointer;
+}
+.btn{
+    padding: 50px;
+}
+#batman{
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-image: url("./images/batman.png");
+    background-size: 50px 50px;
+    cursor: pointer;
+}
+#joker{
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-image: url("./images/joker.png");
+    background-size: 50px 50px;
+    cursor: pointer;
+}
+.batman{
+    background-image: url("./images/batman.png") !important;
+}
+.joker{
+    background-image: url("./images/joker.png") !important;
+}
